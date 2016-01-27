@@ -1,12 +1,7 @@
 package com.jds.battlecode.primenumbers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PrimeNumbersLanucher 
 {
-	List<Long> primesCache = new ArrayList<Long>();
-	
     public static void main( String[] args )
     {
     	long startTime = System.nanoTime();
@@ -16,7 +11,4 @@ public class PrimeNumbersLanucher
     	long endTime = System.nanoTime();
     	System.out.printf("elapsed time: %d ns", endTime - startTime);
     }
-    
-    
-
 }
