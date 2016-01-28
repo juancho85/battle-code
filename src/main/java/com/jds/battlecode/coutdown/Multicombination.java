@@ -1,12 +1,24 @@
 package com.jds.battlecode.coutdown;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Multicombination {
+public class Multicombination<T> {
+	
+	final Class<T> typeParameterClass;
+	
+	public Multicombination(Class<T> typeParameterClass){
+		this.typeParameterClass = typeParameterClass;
+	}
 
-	public static List<Object[]> getCombinations(Object[] possibleValues, int desiredLength) {
-		List<Object[]> resultList = new ArrayList<Object[]>();
+	public List<T[]> getCombinations(T[] possibleValues, int desiredLength) {
+		List<T[]> resultList = new ArrayList<T[]>();
+		if(desiredLength==0){
+			resultList.add(possibleValues);
+			return resultList;
+		}
+		
 		List<String> listIndexes = new ArrayList<String>();
 		for (int i = 0; i < Math.pow(possibleValues.length, desiredLength); i++) {
 			String zeroPadding = "%0"+desiredLength+"d";
@@ -15,7 +27,7 @@ public class Multicombination {
 		}
 
 		for (String index : listIndexes) {
-			Object[] acumulator = new Object[desiredLength];
+			T[] acumulator = (T[]) Array.newInstance(typeParameterClass, desiredLength);
 			for (int i = 0; i < index.length(); i++) {
 				acumulator[i] = possibleValues[Integer.parseInt(index.substring(i, i + 1))];
 			}
