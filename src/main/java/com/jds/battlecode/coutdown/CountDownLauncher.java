@@ -17,6 +17,7 @@ public class CountDownLauncher
     	List<Integer[]> operandsPermutations = operandsCombinations.getAllPosiblePermutations(Arrays.asList(operands));
     	List<Object[]> operatorsPermutations = Multicombination.getCombinations(Operations.values(), operands.length - 1);
     	Countdown countdown = new Countdown(operatorsPermutations, operandsPermutations, targetResult);
+    	//TODO: store the operations used to get the result
     	countdown.executeLogic();
     	long endTime = System.nanoTime();
     	System.out.printf("elapsed time: %d ns", endTime - startTime);
