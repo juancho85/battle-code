@@ -35,6 +35,20 @@ public class Countdown {
 				}
 			}
 		}
+		
+		findClosestResult();
+	}
+	
+	public void findClosestResult(){
+		int closestResult = 0;
+		int difference = 100000;
+		for(Integer res : resultsList){
+			if(Math.abs(res-result) < difference){
+				difference = Math.abs(res-result);
+				closestResult = res;
+			}
+		}
+		System.out.printf("Closest result: %d.%n", closestResult);
 	}
 
 	public int performOperation(int op1, int op2, Operations operation) {

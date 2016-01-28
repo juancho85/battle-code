@@ -10,7 +10,8 @@ public class CountDownLauncher
     public static void main( String[] args ) throws ParseException
     {
     	long startTime = System.nanoTime();
-    	Integer[] operands = {100, 10, 5};
+    	System.out.println("start !!!!");
+    	Integer[] operands = {101, 10, 5, 4};
     	Integer targetResult = Integer.valueOf(115);
     	Permutation<Integer> operandsCombinations = new Permutation<Integer>();
     	List<Integer[]> operandsPermutations = operandsCombinations.getAllPosiblePermutations(Arrays.asList(operands));

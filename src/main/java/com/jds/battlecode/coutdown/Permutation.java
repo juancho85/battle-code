@@ -16,7 +16,7 @@ public class Permutation<T extends Object> {
         }
         if (k == arr.size() -1){
         	posiblePermutations.add((T[]) arr.toArray());
-            System.out.println(Arrays.toString(arr.toArray()));
+//            System.out.println(Arrays.toString(arr.toArray()));
         }
     }
 	
