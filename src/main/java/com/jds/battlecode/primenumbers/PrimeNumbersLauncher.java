@@ -1,6 +1,6 @@
 package com.jds.battlecode.primenumbers;
 
-public class PrimeNumbersLanucher 
+public class PrimeNumbersLauncher
 {
     public static void main( String[] args )
     {
