@@ -17,7 +17,8 @@ public class CaesarCypherLauncher
         int cypherKey = 15;
 
 
-    	new CeasarCypher(cypheredMessage, cypherKey).executeLogic();
+        CaesarCypher caesarCypher = new CaesarCypher(cypheredMessage, cypherKey);
+        System.out.println(caesarCypher.getDecypheredMessage());
     	long endTime = System.nanoTime();
     	System.out.printf("elapsed time: %d ns", endTime - startTime);
     }
