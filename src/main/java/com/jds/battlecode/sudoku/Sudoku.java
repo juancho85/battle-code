@@ -62,7 +62,6 @@ public class Sudoku {
                 addElementToEnsemble(element);
             }
         }
-        System.out.println(elementList);
     }
 
     public void executeLogic() {
@@ -141,7 +140,15 @@ public class Sudoku {
 
     private void printSudoku() {
         System.out.println("SOLUTION:");
-        System.out.print(elementList);
+        System.out.print(row0);
+        System.out.print(row1);
+        System.out.print(row2);
+        System.out.print(row3);
+        System.out.print(row4);
+        System.out.print(row5);
+        System.out.print(row6);
+        System.out.print(row7);
+        System.out.print(row8);
     }
 
     int getSumElementValues(Collection<Integer> uniqueValues){
@@ -187,7 +194,6 @@ public class Sudoku {
                 cuadrant = 8;
             }
         }
-        System.out.println("cuadrant "+cuadrant+" :" + "for element: " + element);
         return cuadrant;
     }
 

@@ -21,7 +21,7 @@ public class SudokuElement {
 
     @Override
     public String toString() {
-        return String.format("SudokuElement [x=%d, y=%d, element=%d]%n", x, y, element);
+        return String.format("[x=%d, y=%d, val=%d]", x, y, element);
     }
 
 }

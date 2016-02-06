@@ -53,6 +53,8 @@ public class SudokuEnsemble {
         return result;
     }
 
-
-
+    @Override
+    public String toString() {
+        return String.format("%s%n",this.elements.toString());
+    }
 }
